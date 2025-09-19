@@ -15,4 +15,54 @@ public class Usuario {
         this.ativo = ativo;
         this.papel = papel;
     }
+
+    // Getters
+    public Long getId() {
+        return id;
+    }
+
+    public String getNomeCompleto() {
+        return nomeCompleto;
+    }
+
+    public String getNomeUsuario() {
+        return nomeUsuario;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public Boolean getAtivo() {
+        return ativo;
+    }
+
+    public String getPapel() {
+        return papel;
+    }
+
+    // Setters
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setNomeCompleto(String nomeCompleto) {
+        this.nomeCompleto = nomeCompleto;
+    }
+
+    public void setNomeUsuario(String nomeUsuario) {
+        this.nomeUsuario = nomeUsuario;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public void setAtivo(Boolean ativo) {
+        this.ativo = ativo;
+    }
+
+    public void setPapel(String papel) {
+        this.papel = papel;
+    }
 }
