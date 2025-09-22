@@ -88,4 +88,18 @@ public class Profissional {
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
+
+    public void atualizarContato(String novoTelefone, String novoEmail) {
+        this.telefone = novoTelefone;
+        this.email = novoEmail;
+    }
+    
+    public void exibirDados() {
+        System.out.println("--- Dados do Profissional ---");
+        System.out.println("Nome: " + this.nome);
+        System.out.println("Registro: " + this.registroConselho);
+        System.out.println("Email: " + this.email);
+        System.out.println("Telefone: " + this.telefone);
+        System.out.println("-----------------------------");
+    }
 }

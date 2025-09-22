@@ -85,4 +85,14 @@ public class Convenio {
     public void setAtivo(Boolean ativo) {
         this.ativo = ativo;
     }
+
+    public void ativar() {
+        this.ativo = true;
+        System.out.println("Convênio " + this.nome + " ativado.");
+    }
+
+    public void desativar() {
+        this.ativo = false;
+        System.out.println("Convênio " + this.nome + " desativado.");
+    }
 }

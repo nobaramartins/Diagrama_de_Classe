@@ -65,4 +65,9 @@ public class Usuario {
     public void setPapel(String papel) {
         this.papel = papel;
     }
+
+    public void mudarSenha(String novaSenha) {
+        this.senha = novaSenha;
+        System.out.println("A senha do usuário " + this.nomeUsuario + " foi alterada.");
+    }
 }
