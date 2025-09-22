@@ -13,7 +13,6 @@ public class Paciente {
     private String cidade;
     private String estado;
 
-    // Construtor
     public Paciente(Long id, String nome, String email, String telefone, Date dataNascimento, String grupoSanguineo, String sexo, String cep, String endereco, String cidade, String estado) {
         this.id = id;
         this.nome = nome;
@@ -26,5 +25,109 @@ public class Paciente {
         this.endereco = endereco;
         this.cidade = cidade;
         this.estado = estado;
+
+    
+    }
+
+   
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    public Date getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public void setDataNascimento(Date dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
+
+    public String getGrupoSanguineo() {
+        return grupoSanguineo;
+    }
+
+    public void setGrupoSanguineo(String grupoSanguineo) {
+        this.grupoSanguineo = grupoSanguineo;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
+    public String getCep() {
+        return cep;
+    }
+
+    public void setCep(String cep) {
+        this.cep = cep;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+    
+    public void atualizarEndereco(String novoCep, String novoEndereco, String novaCidade, String novoEstado) {
+        if (novoCep == null || novoCep.trim().isEmpty() || 
+            novoEndereco == null || novoEndereco.trim().isEmpty()) {
+            throw new IllegalArgumentException("CEP e Endereço não podem ser vazios.");
+        }
+        this.cep = novoCep;
+        this.endereco = novoEndereco;
+        this.cidade = novaCidade;
+        this.estado = novoEstado;
+        System.out.println("Endereço do paciente '" + this.nome + "' foi atualizado com sucesso.");
     }
 }
