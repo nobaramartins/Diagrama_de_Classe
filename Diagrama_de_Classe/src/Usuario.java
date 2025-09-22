@@ -65,4 +65,18 @@ public class Usuario {
     public void setPapel(String papel) {
         this.papel = papel;
     }
+
+    public void ativar() {
+        this.ativo = true;
+    }
+
+
+    public void desativar() {
+        this.ativo = false;
+    }
+
+ 
+    public void alterarSenha(String novaSenha) {
+        this.senha = novaSenha;
+    }
 }
