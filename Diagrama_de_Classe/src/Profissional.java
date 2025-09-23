@@ -89,6 +89,7 @@ public class Profissional {
         this.usuario = usuario;
     }
 
+    
     public void atualizarContato(String novoTelefone, String novoEmail) {
         this.telefone = novoTelefone;
         this.email = novoEmail;

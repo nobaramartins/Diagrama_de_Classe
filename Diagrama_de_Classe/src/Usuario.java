@@ -66,8 +66,29 @@ public class Usuario {
         this.papel = papel;
     }
 
+    
     public void mudarSenha(String novaSenha) {
         this.senha = novaSenha;
         System.out.println("A senha do usuário " + this.nomeUsuario + " foi alterada.");
+    }
+
+    public boolean autenticar(String senhaTentativa) {
+        if (this.senha.equals(senhaTentativa) && this.ativo) {
+            System.out.println("Autenticação bem-sucedida para o usuário " + this.nomeUsuario);
+            return true;
+        } else {
+            System.out.println("Falha na autenticação para o usuário " + this.nomeUsuario);
+            return false;
+        }
+    }
+    
+    public void ativarUsuario() {
+        this.ativo = true;
+        System.out.println("Usuário " + this.nomeUsuario + " ativado.");
+    }
+
+    public void desativarUsuario() {
+        this.ativo = false;
+        System.out.println("Usuário " + this.nomeUsuario + " desativado.");
     }
 }

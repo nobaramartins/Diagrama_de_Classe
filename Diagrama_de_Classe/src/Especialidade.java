@@ -25,6 +25,8 @@ public class Especialidade {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+    
     public void exibirDetalhes() {
         System.out.println("--- Detalhes da Especialidade ---");
         System.out.println("ID: " + this.id);

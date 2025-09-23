@@ -95,7 +95,23 @@ public class Atendimento {
         this.convenio = convenio;
     }
 
+    //Métodos
     public void cancelar() {
         this.status = "Cancelado";
+    }
+
+    public void finalizar() {
+        this.status = "Finalizado";
+        System.out.println("Atendimento #" + this.id + " foi finalizado.");
+    }
+
+    public void aplicarDesconto(double percentual) {
+        if (percentual > 0 && percentual <= 100) {
+            double desconto = this.valor * (percentual / 100);
+            this.valor -= desconto;
+            System.out.println("Desconto de " + percentual + "% aplicado. Novo valor: " + this.valor);
+        } else {
+            System.out.println("Percentual de desconto inválido.");
+        }
     }
 }

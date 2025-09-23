@@ -25,11 +25,7 @@ public class Paciente {
         this.endereco = endereco;
         this.cidade = cidade;
         this.estado = estado;
-
-    
     }
-
-   
 
     public Long getId() {
         return id;
@@ -118,6 +114,7 @@ public class Paciente {
     public void setEstado(String estado) {
         this.estado = estado;
     }
+    
     
     public void atualizarEndereco(String novoCep, String novoEndereco, String novaCidade, String novoEstado) {
         if (novoCep == null || novoCep.trim().isEmpty() || 

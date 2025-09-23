@@ -36,8 +36,17 @@ public class Unidade {
         this.endereco = endereco;
     }
 
+    
     public void atualizarEndereco(String novoEndereco) {
         this.endereco = novoEndereco;
         System.out.println("Endereço da unidade " + this.nome + " atualizado para: " + this.endereco);
+    }
+
+    public void exibirInformacoes() {
+        System.out.println("--- Informações da Unidade ---");
+        System.out.println("ID: " + this.id);
+        System.out.println("Nome: " + this.nome);
+        System.out.println("Endereço: " + this.endereco);
+        System.out.println("-----------------------------");
     }
 }
